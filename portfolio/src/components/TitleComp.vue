@@ -1,19 +1,30 @@
 <template>
     <div class="title">
-        <h2>À propos</h2>
-        <span>Qui suis-je ?</span>
+        <h2>{{title}}</h2>
+        <span>{{overlay}}</span>
     </div>
 </template>
 
 <script>
     export default {
-        name: "TitleComp"
+        name: "TitleComp",
+        props: {
+            title: {
+                type: String,
+                default: ""
+            },
+            overlay: {
+                type: String,
+                default: ""
+            },
+        },
     }
 </script>
 
 <style lang="scss" scoped>
 .title {
     position: relative;
+    text-align: center;
  
     h2 {        
         position: absolute;
@@ -35,5 +46,9 @@
         text-transform: uppercase;
         opacity: 0.1;
     }
+}
+
+.mail {
+    margin-bottom: 30px;
 }
 </style>

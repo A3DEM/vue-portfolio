@@ -2,7 +2,10 @@
   <HeaderComp/>
   <IntroComp/>
   <PersoComp/>
-  <TitleComp/>
+  <AboutMe/>
+  <WebProjects/>
+  <DesignProjects/>
+  <ContactMe/>
 </template>
 
 <script>
@@ -10,7 +13,11 @@
 import HeaderComp from './components/HeaderComp.vue'
 import IntroComp from './components/IntroComp.vue'
 import PersoComp from './components/PersoComp.vue'
-import TitleComp from './components/TitleComp.vue'
+// import TitleComp from './components/TitleComp.vue'
+import AboutMe from './components/AboutMe.vue'
+import WebProjects from './components/WebProjects.vue'
+import DesignProjects from './components/DesignProjects.vue'
+import ContactMe from './components/ContactMe.vue'
 
 export default {
   name: 'App',
@@ -18,7 +25,10 @@ export default {
     HeaderComp,
     IntroComp,
     PersoComp,
-    TitleComp
+    AboutMe,
+    WebProjects,
+    DesignProjects,
+    ContactMe
   }
 }
 </script>
