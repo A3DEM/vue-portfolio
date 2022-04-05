@@ -1,4 +1,7 @@
 <template>
+
+  <div id="app-child">
+
   <HeaderComp/>
   <IntroComp/>
   <PersoComp/>
@@ -6,6 +9,8 @@
   <WebProjects/>
   <DesignProjects/>
   <ContactMe/>
+  </div>
+  <FooterComp/>
 </template>
 
 <script>
@@ -18,6 +23,7 @@ import AboutMe from './components/AboutMe.vue'
 import WebProjects from './components/WebProjects.vue'
 import DesignProjects from './components/DesignProjects.vue'
 import ContactMe from './components/ContactMe.vue'
+import FooterComp from './components/FooterComp.vue'
 
 export default {
   name: 'App',
@@ -28,22 +34,26 @@ export default {
     AboutMe,
     WebProjects,
     DesignProjects,
-    ContactMe
+    ContactMe,
+    FooterComp
   }
 }
 </script>
 
 <style>
-body {
-  margin: 0;
+  body {
+    margin: 0;
+    background-color: #292728;
+    color: white;
 }
-#app {
-  font-family: dharma-gothic-m, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #292728;
-  text-align: center;
-  color: white;
-  padding: 0px 50px;
-}
+  #app {
+    font-family: dharma-gothic-m, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+  }
+
+  #app-child {
+    padding: 0px 50px;
+  }
 </style>
