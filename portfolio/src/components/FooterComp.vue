@@ -1,29 +1,27 @@
 <template>
     <footer>
-       Copyright © 2021 Adem Duran. <br> Made with ❤️ + <img src="@/assets/svg/vuejs.svg" alt="Vue JS"> in Mulhouse, FRANCE.
+        Made with <div class="placeholder"></div> + <div class="placeholder"></div> in Mulhouse, France.
     </footer>
 </template>
 
 <script>
     export default {
-        name: "FooterComp"
+        
     }
 </script>
 
 <style lang="scss" scoped>
     footer {
-        background-color: #1e1e1e;
-        font-family: poppins, sans-serif;
-        padding: 20px 50px;
-        text-transform: uppercase;
-        font-weight: bold;
         font-size: 14px;
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
 
-        img {
-            width: 14px;
-            height: auto;
-            transform: translateY(10%);
-            margin: 0px 3px;
+        .placeholder {
+            height: 15px;
+            width: 15px;
+            background-color: gray;
+            margin: 0px 5px;
         }
     }
 </style>

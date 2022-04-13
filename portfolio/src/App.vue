@@ -1,59 +1,78 @@
 <template>
-
   <div id="app-child">
-
-  <HeaderComp/>
-  <IntroComp/>
-  <PersoComp/>
-  <AboutMe/>
-  <WebProjects/>
-  <DesignProjects/>
-  <ContactMe/>
+    <HeaderComp/>
+    <TitleComp/>
+    <TitlesComp/>
+    <AboutComp/>
+    <WebWork/>
+    <DesignWork/>
+    <ContactComp/>
+    <FooterComp/>
   </div>
-  <FooterComp/>
 </template>
 
 <script>
 
-import HeaderComp from './components/HeaderComp.vue'
-import IntroComp from './components/IntroComp.vue'
-import PersoComp from './components/PersoComp.vue'
-// import TitleComp from './components/TitleComp.vue'
-import AboutMe from './components/AboutMe.vue'
-import WebProjects from './components/WebProjects.vue'
-import DesignProjects from './components/DesignProjects.vue'
-import ContactMe from './components/ContactMe.vue'
-import FooterComp from './components/FooterComp.vue'
+import HeaderComp from "./components/HeaderComp.vue";
+import TitleComp from "./components/TitleComp.vue";
+import TitlesComp from "./components/TitlesComp.vue";
+import AboutComp from "./components/AboutComp.vue";
+import WebWork from "./components/WebWork.vue";
+import DesignWork from "./components/DesignWork.vue";
+import ContactComp from "./components/ContactComp.vue";
+import FooterComp from "./components/FooterComp.vue";
+
 
 export default {
   name: 'App',
   components: {
     HeaderComp,
-    IntroComp,
-    PersoComp,
-    AboutMe,
-    WebProjects,
-    DesignProjects,
-    ContactMe,
+    TitleComp,
+    TitlesComp,
+    AboutComp,
+    WebWork,
+    DesignWork,
+    ContactComp,
     FooterComp
-  }
+}
 }
 </script>
 
 <style>
-  body {
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url("@/assets/fonts/sf-pro-display-regular.OTF") format("opentype");
+    font-display: swap;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url("@/assets/fonts/sf-pro-display-bold.OTF") format("opentype");
+    font-display: swap;
+    font-weight: bold;
+}
+
+body {
     margin: 0;
-    background-color: #292728;
-    color: white;
+    color: black;
 }
   #app {
-    font-family: dharma-gothic-m, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
+    font-family: "SF Pro Display";
   }
 
   #app-child {
-    padding: 0px 50px;
+    padding: 65px 50px;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 17.5px;
+  }
+
+  h1 > span {
+    color: gray;
+    font-weight: normal;
+    font-size: 16px;
   }
 </style>

@@ -1,54 +1,53 @@
 <template>
     <div class="title">
-        <h2>{{title}}</h2>
-        <span>{{overlay}}</span>
+        <h1>Adem Duran <br> <span>Développeur junior</span></h1>
+        <div class="emojis">
+            <div class="placeholder"></div>
+            <span>+</span>
+            <div class="placeholder"></div>
+            <span>+</span>
+            <div class="placeholder"></div>
+        </div>
+        <div class="social-links">
+            <LinkComp title="LinkedIn"/>
+            <LinkComp title="GitHub"/>
+            <LinkComp title="Dribbble"/>
+            <LinkComp title="Instagram"/>
+            <LinkComp title="Email"/>
+        </div>
     </div>
 </template>
 
 <script>
+import LinkComp from "./LinkComp.vue";
     export default {
-        name: "TitleComp",
-        props: {
-            title: {
-                type: String,
-                default: ""
-            },
-            overlay: {
-                type: String,
-                default: ""
-            },
-        },
-    }
+    name: "TitleComp",
+    components: { LinkComp }
+}
 </script>
 
 <style lang="scss" scoped>
-.title {
-    position: relative;
-    text-align: center;
- 
-    h2 {        
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 32px;
-        font-weight: 800;
-        font-style: italic;
-        text-transform: uppercase;
-        margin-top: 0;
-        z-index: 2;
-    }
-    span {
 
-        font-size: 64px;
-        font-weight: 800;
-        font-style: italic;
-        text-transform: uppercase;
-        opacity: 0.1;
-    }
-}
+    .title {
 
-.mail {
-    margin-bottom: 30px;
-}
+        .emojis {
+
+            display: flex;
+            align-items: center;
+
+            .placeholder {
+                height: 40px;
+                width: 40px;
+                background-color: gray;
+            }
+
+            span {
+                margin: 0px 12px;
+            }
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+    }
 </style>

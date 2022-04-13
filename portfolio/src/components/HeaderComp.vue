@@ -1,33 +1,73 @@
 <template>
     <header>
-        <span>AD</span>
-        <svg width="25" height="19" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="25" y1="17.5" x2="-1.31134e-07" y2="17.5" stroke="white" stroke-width="3"/>
-            <line x1="25" y1="9.5" x2="-1.31134e-07" y2="9.5" stroke="white" stroke-width="3"/>
-            <line x1="25" y1="1.5" x2="-1.31134e-07" y2="1.5" stroke="white" stroke-width="3"/>
-        </svg>
+        <img src="@/assets/img/photo-presentation-small.jpg" alt="C'est moi !" width="110" height="110">
 
+        <div class="switch">
+            <div class="switch-img">
+                <img src="@/assets/img/emoji/sun.png" alt="Light Mode" width="30" height="30">
+            </div>
+            <div class="switch-item">
+                <div class="switch-toggle"></div>
+            </div>
+            <div class="switch-img">
+                <img src="@/assets/img/emoji/moon.png" alt="Dark Mode" width="30" height="30">
+            </div>
+        </div>
     </header>
 </template>
 
 <script>
     export default {
-        name: "HeaderComp"
+        name:"HeaderComp"
     }
 </script>
 
 <style lang="scss" scoped>
-header {
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0px;
 
-    span {
-        font-size: 48px;
-        font-weight: 800;
-        font-style: italic;
+    header {
+
+        display: flex;
+
+        img {
+            border-radius: 1000px;
+        }
+
+        .switch {
+            display: flex;
+            align-items: center;
+            align-self: flex-start;
+            margin-left: auto;
+            transition: 0.3s ease-in-out;
+            
+            &-item {
+                background-color: #E9E9EB;
+                width: 50px;
+                height: 30px;
+                border-radius: 100px;
+                display: flex;
+                align-items: center;
+                margin: 0px 10px;
+                transition: 0.3s ease-in-out;
+            }
+
+            &-toggle {
+                background-color: white;
+                width: 25px;
+                height: 25px;
+                border-radius: 100px;
+                transform: translateX(4px);
+                transition: 0.3s ease-in-out;
+            }
+        }
+
+        .active {
+            .switch-item {
+                background-color: #32D74B;
+            }
+
+            .switch-toggle {
+                transform: translateX(85%);
+            }
+        }
     }
-}
 </style>
