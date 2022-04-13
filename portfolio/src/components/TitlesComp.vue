@@ -2,8 +2,8 @@
     <div class="titles">
         <div v-for="item in items" v-bind:key="item"  class="titles-container">
             <div class="titles-title">
-            <h2>{{item.title}}</h2>
-            <div class="placeholder"></div>
+                <h2>{{item.title}}</h2>
+                <img :src="require(`@/assets/img/emoji/${item.filename}.png`)" :alt="item.alt" width="20" height="20">
             </div>
             <p>{{item.paragraph}}</p>
         </div>
@@ -19,14 +19,20 @@
                         {
                         title:"Propulsé par la créativité",
                         paragraph:"Chaque projet est l'opportunité de laisser parler son imagination. Découvrez la mienne au travers de mes projets !",
+                        filename: "rocket",
+                        alt: "Fusée"
                     },
                     {
                         title:"Guidé par le développement web",
                         paragraph:"Au cœur de ma formation, le développement web est le terrain sur lequel je peux m'exprimer. Surtout lors de projets créatifs.",
+                        filename: "computer",
+                        alt: "Ordinateur"
                     },
                     {
                         title:"Passionné par le football",
                         paragraph:"L'esprit d'équipe, la détermination et la rigueur sont quelques unes de mes qualités qui découlent de mon amour du football.",
+                        filename: "football",
+                        alt: "Football"
                     }
                 ]
             }
@@ -54,10 +60,7 @@
             margin-bottom: 0;
             color: #6D6D6D;
         }
-        .placeholder {
-            height: 20px;
-            width: 20px;
-            background-color: gray;
+        img {
             margin-left: 10px;
         }
     }

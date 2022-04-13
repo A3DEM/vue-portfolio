@@ -1,6 +1,6 @@
 <template>
     <footer>
-        Made with <div class="placeholder"></div> + <div class="placeholder"></div> in Mulhouse, France.
+        Made with <img src="@/assets/img/emoji/heart.png" alt="Love" height="15" width="15"> + <img src="@/assets/img/svg/vuejs.svg" alt="Vue JS" height="15" width="15"> in Mulhouse, France.
     </footer>
 </template>
 
@@ -17,10 +17,7 @@
         align-items: center;
         margin-top: 30px;
 
-        .placeholder {
-            height: 15px;
-            width: 15px;
-            background-color: gray;
+        img {
             margin: 0px 5px;
         }
     }

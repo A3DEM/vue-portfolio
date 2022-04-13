@@ -1,6 +1,6 @@
 <template>
-  <div id="app-child">
-    <HeaderComp/>
+  <div id="app-child" :class="mode">
+    <HeaderComp :mode="mode" @toggle="toggle"/>
     <TitleComp/>
     <TitlesComp/>
     <AboutComp/>
@@ -34,7 +34,17 @@ export default {
     DesignWork,
     ContactComp,
     FooterComp
-}
+  },
+  data() {
+    return {
+      mode: 'light'
+    }
+  },
+  methods: {
+    toggle() {
+      (this.mode === 'dark') ? this.mode = 'light': this.mode = 'dark';
+    }
+  },
 }
 </script>
 
@@ -60,11 +70,18 @@ body {
   #app {
     font-family: "SF Pro Display";
   }
-
   #app-child {
     padding: 65px 50px;
+    transition: all 0.3s ease-in-out;
   }
-
+  .dark {
+    background-color: black;
+    color: white;
+  }
+  .light {
+    background-color: white;
+    color: #202020;
+  }
   h1 {
     font-size: 32px;
     line-height: 17.5px;
