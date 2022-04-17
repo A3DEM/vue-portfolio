@@ -75,7 +75,7 @@
             display: flex;
             flex-direction: column;
             align-items: end;      
-            transform: translateY(85%);
+            transform: translateY(88%);
             pointer-events: auto;
 
             .burger {   
