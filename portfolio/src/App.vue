@@ -1,7 +1,9 @@
 <template>
   <div id="app-child" :class="mode">
-    <HeaderComp :mode="mode" @toggle="toggle"/>
-    <TitleComp/>
+    <div class="introduction">
+      <HeaderComp :mode="mode" @toggle="toggle"/>
+      <TitleComp/>
+    </div>
     <TitlesComp/>
     <AboutComp/>
     <WebWork/>
@@ -54,13 +56,23 @@ export default {
     font-family: 'SF Pro Display';
     src: url("@/assets/fonts/sf-pro-display-regular.OTF") format("opentype");
     font-display: swap;
-    font-weight: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url("@/assets/fonts/sf-pro-display-medium.OTF") format("opentype");
+    font-display: swap;
+    font-weight: 500;
 }
 @font-face {
     font-family: 'SF Pro Display';
     src: url("@/assets/fonts/sf-pro-display-bold.OTF") format("opentype");
     font-display: swap;
     font-weight: bold;
+}
+
+* {
+  transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -72,10 +84,14 @@ body {
   }
   #app-child {
     padding: 65px 50px;
-    transition: all 0.3s ease-in-out;
+  }
+  #app-child > div {
+    max-width: 512px;
   }
   .dark {
     background-color: black;
+  }
+  .dark h1, .dark h2, .dark h3, .dark footer {
     color: white;
   }
   .light {
@@ -91,5 +107,16 @@ body {
     color: gray;
     font-weight: normal;
     font-size: 16px;
+  }
+
+  @media screen and (min-width:1024px) {
+    .introduction {
+      display: grid;
+      grid-template-columns: 215px 1fr;
+      grid-gap: 50px;
+    }
+    #app-child > div {
+      max-width: 1024px;
+    }
   }
 </style>

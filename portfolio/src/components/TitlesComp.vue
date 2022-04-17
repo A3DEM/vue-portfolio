@@ -41,34 +41,55 @@
 </script>
 
 <style lang="scss" scoped>
-.titles {
+    .titles {
 
-    margin-top: 40px;
+        margin-top: 40px;
 
-    &-container {
-        text-align: left;
-        position: relative;
-        margin-bottom: 40px;
+        &-container {
+            text-align: left;
+            position: relative;
+            margin-bottom: 40px;
 
-        h2 {
-            font-size: 16px;
-            margin: 0;
+            h2 {
+                font-size: 20px;
+                margin: 0;
+            }
+            p {
+                font-size: 12px;
+                margin-top: 5px;
+                margin-bottom: 0;
+                color: #6D6D6D;
+            }
+            img {
+                margin-left: 10px;
+            }
         }
-        p {
-            font-size: 12px;
-            margin-top: 5px;
-            margin-bottom: 0;
-            color: #6D6D6D;
-        }
-        img {
-            margin-left: 10px;
+
+        &-title {
+            display: flex;
+        }   
+    }
+  @media screen and (min-width:1024px) {
+    .titles {
+        margin-left: 265px;
+        margin-top: 60px;
+
+        &-container {
+            margin-bottom: 60px;
+
+            h2 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 18px;
+                margin-top: 10px;
+            }
+            img {
+                margin-left: 15px;
+                width: 30px;
+                height: 30px;
+            }
         }
     }
-
-    &-title {
-        display: flex;
-    }
-
-    
-}
+  }
 </style>

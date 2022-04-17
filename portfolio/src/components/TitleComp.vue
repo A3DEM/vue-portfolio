@@ -2,18 +2,17 @@
     <div class="title">
         <h1>Adem Duran <br> <span>Développeur junior</span></h1>
         <div class="emojis">
-            <img src="@/assets/img/emoji/developer.png" alt="Développeur" width="55" height="55">
+            <img src="@/assets/img/emoji/developer.png" alt="Développeur" width="48" height="48">
             <span>+</span>
-            <img src="@/assets/img/emoji/artist.png" alt="Artiste" width="55" height="55">
+            <img src="@/assets/img/emoji/artist.png" alt="Artiste" width="48" height="48">
             <span>+</span>
-            <img src="@/assets/img/emoji/ninja.png" alt="Ninja" width="55" height="55">
+            <img src="@/assets/img/emoji/ninja.png" alt="Ninja" width="48" height="48">
         </div>
         <div class="social-links">
             <LinkComp title="LinkedIn"/>
             <LinkComp title="GitHub"/>
             <LinkComp title="Dribbble"/>
             <LinkComp title="Instagram"/>
-            <LinkComp title="Email"/>
         </div>
     </div>
 </template>
@@ -35,12 +34,6 @@ import LinkComp from "./LinkComp.vue";
             display: flex;
             align-items: center;
 
-            .placeholder {
-                height: 40px;
-                width: 40px;
-                background-color: gray;
-            }
-
             span {
                 margin: 0px 12px;
             }
@@ -48,6 +41,36 @@ import LinkComp from "./LinkComp.vue";
 
         .social-links {
             margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        .title {
+            
+            h1 {
+                font-size: 48px;
+                line-height: 28px;
+                margin-top: 55px;
+
+                span {
+                    font-size: 24px;
+                }
+            }
+
+            .emojis {
+
+                font-size: 18px;
+                img {
+                    width: 60px;
+                    height: auto;
+                }
+            }
+
+            .social-links {
+                margin-top: 30px;
+            }   
         }
     }
 </style>

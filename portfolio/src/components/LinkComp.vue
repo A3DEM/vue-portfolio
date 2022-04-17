@@ -28,4 +28,11 @@
     .no-margin {
         margin: 0;
     }
+
+    @media screen and (min-width:1024px) {
+        a {
+            font-size: 18px;
+            margin-right: 18px;
+        }
+    }
 </style>

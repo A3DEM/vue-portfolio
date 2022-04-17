@@ -1,6 +1,6 @@
 <template>
     <header>
-        <img src="@/assets/img/photo-presentation-small.jpg" alt="C'est moi !" width="110" height="110">
+        <img class="me" src="@/assets/img/photo-presentation-small.webp" alt="C'est moi !" width="110" height="110">
 
         <div v-bind:class="{switch:true, active: isActive }" @click="isActive = !isActive; $emit('toggle')">
             <div class="switch-img">
@@ -37,6 +37,8 @@
     header {
 
         display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
 
         img {
             border-radius: 1000px;
@@ -46,8 +48,7 @@
             display: flex;
             align-items: center;
             align-self: flex-start;
-            margin-left: auto;
-            transition: 0.3s ease-in-out;
+            margin-top: 10px;
             
             &-item {
                 background-color: #E9E9EB;
@@ -57,7 +58,6 @@
                 display: flex;
                 align-items: center;
                 margin: 0px 10px;
-                transition: 0.3s ease-in-out;
             }
 
             &-toggle {
@@ -66,7 +66,6 @@
                 height: 25px;
                 border-radius: 100px;
                 transform: translateX(4px);
-                transition: 0.3s ease-in-out;
             }
         }
 
@@ -77,6 +76,35 @@
 
             .switch-toggle {
                 transform: translateX(85%);
+            }
+        }
+    }
+
+    @media screen and (min-width:375px) {
+        header {
+
+            flex-direction: row;
+
+            .switch {
+                margin-left: auto;
+            }
+        }
+    }
+    
+    @media screen and (min-width:1024px) {
+        header {
+
+            display: inline-flex;
+            flex-direction: column;
+
+            .me {
+                width: 215px;
+                height: auto;
+            }
+            
+            .switch {
+                margin-right: auto;
+                margin-top: 15px;
             }
         }
     }
