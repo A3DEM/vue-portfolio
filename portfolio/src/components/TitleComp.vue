@@ -9,10 +9,10 @@
             <img src="@/assets/img/emoji/ninja.png" alt="Ninja" width="48" height="48">
         </div>
         <div class="social-links">
-            <LinkComp title="LinkedIn"/>
-            <LinkComp title="GitHub"/>
-            <LinkComp title="Dribbble"/>
-            <LinkComp title="Instagram"/>
+            <LinkComp link="https://www.linkedin.com/in/adem-duran/" title="LinkedIn"/>
+            <LinkComp link="https://github.com/A3DEM/" title="GitHub"/>
+            <LinkComp link="https://dribbble.com/a3dem/" title="Dribbble"/>
+            <LinkComp link="https://www.instagram.com/a3dem._/" title="Instagram"/>
         </div>
     </div>
 </template>
