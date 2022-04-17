@@ -1,5 +1,6 @@
 <template>
   <div id="app-child" :class="mode">
+    <MenuComp/>
     <div class="introduction">
       <HeaderComp :mode="mode" @toggle="toggle"/>
       <TitleComp/>
@@ -15,6 +16,7 @@
 
 <script>
 
+import MenuComp from "./components/MenuComp.vue";
 import HeaderComp from "./components/HeaderComp.vue";
 import TitleComp from "./components/TitleComp.vue";
 import TitlesComp from "./components/TitlesComp.vue";
@@ -28,6 +30,7 @@ import FooterComp from "./components/FooterComp.vue";
 export default {
   name: 'App',
   components: {
+    MenuComp,
     HeaderComp,
     TitleComp,
     TitlesComp,
@@ -75,15 +78,20 @@ export default {
   transition: all 0.3s ease-in-out;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    margin: 0;
-    color: black;
+  margin: 0;
+  color: black;
 }
   #app {
-    font-family: "SF Pro Display";
+    font-family: "SF Pro Display", sans-serif;
   }
   #app-child {
     padding: 65px 50px;
+    position: relative;
   }
   #app-child > div {
     max-width: 512px;
@@ -91,9 +99,12 @@ body {
   .dark {
     background-color: black;
   }
-  .dark h1, .dark h2, .dark h3, .dark footer {
+  .dark h1, .dark h2, .dark h3,.dark .emojis > span, .dark footer, .dark #menu .container ul li a p {
     color: white;
   }
+  .dark #menu .container .burger, .dark #menu .container ul {
+    background-color: #202020BF;
+  } 
   .light {
     background-color: white;
     color: #202020;

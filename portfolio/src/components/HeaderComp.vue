@@ -2,7 +2,7 @@
     <header>
         <img class="me" src="@/assets/img/photo-presentation-small.webp" alt="C'est moi !" width="110" height="110">
 
-        <div v-bind:class="{switch:true, active: isActive }" @click="isActive = !isActive; $emit('toggle')">
+        <div :class="{switch:true, active: isActive }" @click="isActive = !isActive; $emit('toggle')">
             <div class="switch-img">
                 <img src="@/assets/img/emoji/sun.png" alt="Light Mode" width="30" height="30">
             </div>
