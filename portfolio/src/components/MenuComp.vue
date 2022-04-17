@@ -69,11 +69,15 @@
         left: 0;
         right:0;
         padding: 50px;
+        pointer-events: none;
+
         .container {
             display: flex;
             flex-direction: column;
             align-items: end;      
             transform: translateY(85%);
+            pointer-events: auto;
+
             .burger {   
                 background-color: #c0c0c0bf;
                 backdrop-filter: blur(4px);
