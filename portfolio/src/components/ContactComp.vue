@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import LinkComp from "./LinkComp.vue";
-    export default {
-    components: { LinkComp }
-}
+    import LinkComp from "./LinkComp.vue";
+        export default {
+        components: { LinkComp }
+    }
 </script>
 
 <style lang="scss" scoped>
@@ -28,15 +28,12 @@ import LinkComp from "./LinkComp.vue";
             color: #6D6D6D;
         }
     }
-
     @media screen and (min-width:1024px) {
         #contact {
-
             display: grid;
             grid-template-columns: 215px 1fr;
             grid-gap: 50px;
             margin-top: 60px;
-
             h2 {
                 font-size: 30px;
                 margin: 0;

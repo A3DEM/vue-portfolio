@@ -6,7 +6,7 @@
 
 <script>
     export default {
-        
+        name: "FooterComp"
     }
 </script>
 
@@ -18,18 +18,15 @@
         align-items: center;
         margin-top: 30px;
         font-weight: bold;
-
         img {
             margin: 0px 5px;
         }
     }
-
     @media screen and (min-width:1024px) {
         footer {
             font-size: 24px;
             margin-left: 265px;
             margin-top: 60px;
-
             img {
                 width: 25px;
                 height: auto;

@@ -1,6 +1,9 @@
 <template>
     <div class="title">
-        <h1>Adem Duran <br> <span>Développeur junior</span></h1>
+        <h1>
+            Adem Duran <br>
+            <span>Développeur junior</span>
+        </h1>
         <div class="emojis">
             <img src="@/assets/img/emoji/developer.png" alt="Développeur" width="48" height="48">
             <span>+</span>
@@ -18,27 +21,23 @@
 </template>
 
 <script>
-import LinkComp from "./LinkComp.vue";
+    import LinkComp from "./LinkComp.vue";
     export default {
-    name: "TitleComp",
-    components: { LinkComp }
-}
+        name: "TitleComp",
+        components: { LinkComp }
+    }
 </script>
 
 <style lang="scss" scoped>
 
     .title {
-
         .emojis {
-
             display: flex;
             align-items: center;
-
             span {
                 margin: 0px 12px;
             }
         }
-
         .social-links {
             margin-top: 20px;
             display: flex;
@@ -47,27 +46,22 @@ import LinkComp from "./LinkComp.vue";
     }
 
     @media screen and (min-width:1024px) {
-        .title {
-            
+        .title {    
             h1 {
                 font-size: 48px;
                 line-height: 28px;
                 margin-top: 55px;
-
                 span {
                     font-size: 24px;
                 }
             }
-
             .emojis {
-
                 font-size: 18px;
                 img {
                     width: 60px;
                     height: auto;
                 }
             }
-
             .social-links {
                 margin-top: 30px;
             }   

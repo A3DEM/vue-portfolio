@@ -14,7 +14,7 @@
                 type: String,
                 default:"Lien"
             }
-        },
+        }
     }
 </script>
 
@@ -28,7 +28,6 @@
     .no-margin {
         margin: 0;
     }
-
     @media screen and (min-width:1024px) {
         a {
             font-size: 18px;

@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import ProjectComp from "./ProjectComp.vue"
+    import ProjectComp from "./ProjectComp.vue"
     export default {
         name:"WebWork",
         components: {
             ProjectComp,
-        },
+        }
     }
 </script>
 
@@ -22,15 +22,12 @@ import ProjectComp from "./ProjectComp.vue"
             font-size: 20px;
         }
     }
-
     @media screen and (min-width:1024px) {
         #web {
-
             display: grid;
             grid-template-columns: 215px 1fr;
             grid-gap: 50px;
             margin-top: 60px;
-
             h2 {
                 margin: 0px;
                 font-size: 30px;
