@@ -247,6 +247,11 @@
                             }
                         }
                     }
+                    li:last-child {
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
                 }
             }
         }

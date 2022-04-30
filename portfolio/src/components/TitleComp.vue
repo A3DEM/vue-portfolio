@@ -1,15 +1,25 @@
 <template>
     <div class="title">
-        <h1>
-            Adem Duran <br>
-            <span>Développeur junior</span>
-        </h1>
+        <h1>Adem Duran</h1>
+        <div class="subtitles">
+            <h2 class="developer">Développeur junior</h2>
+            <h2 class="cdb beginning">Certified Developer Boy</h2>
+        </div>
         <div class="emojis">
-            <img src="@/assets/img/emoji/developer.png" alt="Développeur" width="48" height="48">
-            <span>+</span>
-            <img src="@/assets/img/emoji/artist.png" alt="Artiste" width="48" height="48">
-            <span>+</span>
-            <img src="@/assets/img/emoji/ninja.png" alt="Ninja" width="48" height="48">
+            <div class="developer">
+                <img src="@/assets/img/emoji/developer.png" alt="Développeur" width="48" height="48">
+                <span>+</span>
+                <img src="@/assets/img/emoji/artist.png" alt="Artiste" width="48" height="48">
+                <span>+</span>
+                <img src="@/assets/img/emoji/ninja.png" alt="Ninja" width="48" height="48"  @click="change()">
+            </div>
+            <div class="cdb beginning">
+                <img src="@/assets/img/emoji/custom/js.png" alt="JavaScript" width="48" height="48">
+                <span>+</span>
+                <img src="@/assets/img/emoji/custom/scss.png" alt="SCSS" width="48" height="48">
+                <span>+</span>
+                <img src="@/assets/img/emoji/custom/vuejs.png" alt="Vue JS" width="48" height="48"  @click="change()">
+            </div>
         </div>
         <div class="social-links">
             <LinkComp link="https://www.linkedin.com/in/adem-duran/" title="LinkedIn"/>
@@ -21,22 +31,97 @@
 </template>
 
 <script>
+    //import gsap from 'gsap';
+
     import LinkComp from "./LinkComp.vue";
     export default {
         name: "TitleComp",
-        components: { LinkComp }
+        components: { LinkComp },
+        data() {
+            return {
+                isCertified: false
+            }
+        },
+        methods: {
+            change() {
+
+                if (!this.isCertified) {
+                    
+                    document.querySelectorAll(".developer").forEach(element => {
+                        element.classList.add("end");
+                    });
+                    document.querySelectorAll(".cdb").forEach(element => {
+                        element.classList.remove("beginning");
+                    });
+                    this.isCertified = !this.isCertified;
+                } else {
+                    document.querySelectorAll(".developer").forEach(element => {
+                        element.classList.remove("end");
+                    });
+                    document.querySelectorAll(".cdb").forEach(element => {
+                        element.classList.add("beginning");
+                    });
+                    this.isCertified = !this.isCertified;
+                }
+
+            }
+        },
     }
 </script>
 
 <style lang="scss" scoped>
 
     .title {
-        .emojis {
-            display: flex;
-            align-items: center;
-            span {
-                margin: 0px 12px;
+
+        h1 {
+            margin-bottom: 0;
+        }
+        .subtitles {
+            margin: 8px 0px 20px 0px;
+            position: relative;
+            min-height: 19px;
+            h2 {
+                font-size: 16px;
+                font-weight: 500;
+                color: #6D6D6D;
+                transition-timing-function: cubic-bezier(.65,0,.35,1);
+                transition-duration: .5s;
+                position: absolute;
+                margin: 0;
+                top: 0;
+                pointer-events: all;
+                left: 0;
             }
+        }
+        .emojis {
+            position: relative;
+            min-height: 48px;
+
+            div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                transition-timing-function: cubic-bezier(.65,0,.35,1);
+                transition-duration: .5s;
+                transition-delay: 0.1s;
+                pointer-events: all;
+                span {
+                    margin: 0px 12px;
+                }
+            }
+        }
+
+        .subtitles .end, .emojis .end {
+            transform: translateX(100px);
+            opacity: 0;
+            pointer-events: none;
+        }
+        .subtitles .beginning, .emojis .beginning {
+            transform: translateX(-100px);
+            opacity: 0;
+            pointer-events: none;
         }
         .social-links {
             margin-top: 20px;
@@ -51,9 +136,14 @@
                 font-size: 48px;
                 line-height: 28px;
                 margin-top: 55px;
-                span {
+                
+            }
+            .subtitles {
+                min-height: 29px;
+                margin-bottom: 30px;
+                h2 {
                     font-size: 24px;
-                }
+                }   
             }
             .emojis {
                 font-size: 18px;

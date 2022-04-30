@@ -2,7 +2,7 @@
     <div id="contact">
         <h2>Contact</h2>
         <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nulla consectetur recusandae harum quisquam quaerat molestiae ab impedit.</p>
+            <p>N'hésitez pas à me contacter pour plus d'informations ou si vous avez des questions !</p>
             <LinkComp link="mailto:ademduran6888@gmail.com" title="Envoyer un mail"/>
         </div>
     </div>

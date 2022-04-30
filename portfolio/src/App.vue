@@ -39,7 +39,7 @@
     },
     data() {
       return {
-        mode: 'light'
+        mode: 'dark'
       }
     },
     methods: {
@@ -118,7 +118,10 @@
       grid-gap: 50px;
     }
     #app-child > div {
-      max-width: 1024px;
+      max-width: 1080px;
+    }
+    #app-child > .titles {
+      max-width: calc(1080px - 265px);
     }
   }
 </style>

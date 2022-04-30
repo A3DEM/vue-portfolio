@@ -1,11 +1,11 @@
 <template>
     <header>
         <img class="me" src="@/assets/img/photo-presentation-small.webp" alt="C'est moi !" width="110" height="110">
-        <div :class="{switch:true, active: isActive }" @click="isActive = !isActive; $emit('toggle')">
+        <div :class="{switch:true, active: isActive }">
             <div class="switch-img">
                 <img src="@/assets/img/emoji/sun.png" alt="Light Mode" width="30" height="30">
             </div>
-            <div class="switch-item">
+            <div class="switch-item" @click="isActive = !isActive; $emit('toggle')">
                 <input type="button" class="switch-toggle">
             </div>
             <div class="switch-img">
@@ -21,7 +21,7 @@
         props: ["mode"],
         data() {
             return {
-                isActive: false
+                isActive: true
             }
         }
     }

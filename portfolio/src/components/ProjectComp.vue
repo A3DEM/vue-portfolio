@@ -137,7 +137,7 @@
                     },
                     {
                         title: "L'Étrange Historie de Mr. Anderson",
-                        paragraph: "Avec son nouveau projet, Laylow a su confirmer qu'il était définivement le Man of the Year. L'Étrange Histoire de Mr. Anderson est sorti après Trinity. . La Trinity Featuring Interface se met à jour et devient la Digitalmundo Featuring Interface",
+                        paragraph: "Avec son nouveau projet, Laylow a su confirmer qu'il était définivement le Man of the Year. L'Étrange Histoire de Mr. Anderson est sorti après Trinity. La Trinity Featuring Interface se met à jour et devient la Digitalmundo Featuring Interface",
                         link : "https://youtu.be/iHKKcfcYXls/"
                     },
                     {
